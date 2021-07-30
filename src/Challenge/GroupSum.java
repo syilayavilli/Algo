@@ -2,20 +2,28 @@ package Challenge;
 
 public class GroupSum {
 
-    public static void main() {
+    public static void main(String[] args) {
 //        groupSum(0, [2, 4, 8], 10); //→ true
 //        groupSum(0, [2, 4, 8], 14); // → true
 //        groupSum(0, [2, 4, 8], 9); // → false
 
         int[] ary = {2, 4, 8};
 
-        System.out.println("{2, 4, 8} target 10 " + groupSum(ary, 10) );
-        System.out.println("{2, 4, 8} target 10 " + groupSum(ary, 14) );
-        System.out.println("{2, 4, 8} target 10 " + groupSum(ary, 9) );
+//        System.out.println("{2, 4, 8} target 10 " + groupSum(ary, 10) );
+//        System.out.println("{2, 4, 8} target 14 " + groupSum(ary, 14) );
+//        System.out.println("{2, 4, 8} target  9 " + groupSum(ary, 9) );
+
+        System.out.println("groupSum2 {2, 4, 8} target 10 " + groupSum2(ary, 10) );
+        System.out.println("groupSum2 {2, 4, 8} target 14 " + groupSum2(ary, 14) );
+        System.out.println("groupSum2 {2, 4, 8} target  9 " + groupSum2(ary, 9) );
     }
 
     public static boolean groupSum(int[] ary, int target) {
         return groupSum(ary, 0, target);
+    }
+
+    public static boolean groupSum2(int[] ary, int target) {
+        return groupSum2(ary, 0, target);
     }
 
     public static boolean groupSum(int[] ary, int i,  int target) {
