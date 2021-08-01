@@ -3,6 +3,7 @@ package Challenge;
 //Permutation - number of cases for an array will be n! i.e. 3! = 6 say for [1,2,3], [2,1,3],
 // [5,6,7]
 // Backtracking kind of problem
+// Notes: the "i" is the "index" used here
 
 import java.util.Arrays;
 
