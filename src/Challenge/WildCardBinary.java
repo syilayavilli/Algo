@@ -8,6 +8,8 @@ package Challenge;
 //        Please write a program that takes given strings as input and produces the suggested output.
 //        Suggested time: 20 minutes.
 
+import java.util.Arrays;
+
 public class WildCardBinary {
 
     public static void main(String [] args) {
@@ -16,10 +18,19 @@ public class WildCardBinary {
 
         String str1 = "1?0?";
         print(str1.toCharArray(), 0);
+
+        String str2 = "????";
+        print(str2.toCharArray(), 0);
+
+        String str3 = "1111";
+        print(str3.toCharArray(), 0);
+
+
     }
 
     public static void print(char[] str, int index) {
 
+        //Base Condition
         if (index == str.length) {
             System.out.println(str);
             return;
@@ -37,7 +48,9 @@ public class WildCardBinary {
 
             // NOTE: Need to backtrack as string
             // is passed by reference to the function
+            //System.out.println("b index=" + index + " value "  + str[index]);
             str[index] = '?';
+            System.out.println("a" +  Arrays.toString(str));
 
         } else
             print(str, index+1);
