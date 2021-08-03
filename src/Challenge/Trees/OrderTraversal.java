@@ -14,6 +14,13 @@ public class OrderTraversal {
 
     public static void main(String[] args ) {
 
+/*
+            0
+           /  \
+          1    2
+         /      \
+        3        4
+*/
         Node  root = new Node(0);
         Node  node1 = new Node(1);
         Node  node2 = new Node(2);
