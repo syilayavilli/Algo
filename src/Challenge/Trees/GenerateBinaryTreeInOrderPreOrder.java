@@ -108,12 +108,14 @@ public class GenerateBinaryTreeInOrderPreOrder {
         int index = inorderMap.get(root.val);
 
         //Since PostOrder is Left-Right-Center so the Post Index for Right Subtree root will be decreasing from the end of postOrder
+        //left-right-center <---
         root.right = buildPostorder(postorder, inorder, index+1, inEnd, postIndex-1);
 
-        //Since PostOrder is Left-Right-Center, so the POst Index doe the left Subtree root will be from the end of postOrder
-        //reduce the number of nodes that was used up by the right subtree minus one will begin the left subtree node
-        //inEnd - index will ne the number of node used by right subtree and subtract that from postIndex-1
-        //cause postIndex was used by this child's root
+        //Since PostOrder is Left-Right-Center, so the POst Index for the left Subtree root will be,  from the end of PostOrder
+        // minus one (used by child's root) reduce the number of nodes that was used up by the right subtree and its after this
+        // will begin the left subtree node
+        //(inEnd - index) from the inorder will give the number of node used by right subtree and subtract that from postIndex-1
+        //cause postIndex was already used by this child's root
         root.left = buildPostorder(postorder, inorder, inStart, index-1, (postIndex - 1) - (inEnd - index));
 
 
