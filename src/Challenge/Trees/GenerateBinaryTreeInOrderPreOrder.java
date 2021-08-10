@@ -1,5 +1,11 @@
 package Challenge.Trees;
 
+//This provides solutions to two problems
+//1. Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder
+//   is the inorder traversal of the same tree, construct and return the binary tree.
+//2. Given two integer arrays postorder and inorder where postorder is the postorder traversal of a binary tree and inorder
+//   is the inorder traversal of the same tree, construct and return the binary tree.
+
 //https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 //Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder
 //        is the inorder traversal of the same tree, construct and return the binary tree.
