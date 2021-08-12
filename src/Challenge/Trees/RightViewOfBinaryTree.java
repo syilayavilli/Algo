@@ -75,6 +75,40 @@ public class RightViewOfBinaryTree {
         return visibleValues;
     }
 
+    public static List<TreeNode> leftSideView(TreeNode current) {
+
+        List<TreeNode> visibleValues = new ArrayList<TreeNode>();
+
+        if (current == null) {
+            return visibleValues;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+
+        queue.offer(current);
+        while (!queue.isEmpty() ) {
+
+            int size = queue.size();
+
+            //Process through Queue size and include the last one to the visible list
+            for (int i = 0; i < size; i++) {
+
+                current = queue.poll();
+                if (i == 0) {
+                    visibleValues.add(current);
+                }
+
+                if (current.left != null)
+                    queue.add(current.left);
+
+                if (current.right != null)
+                    queue.add(current.right);
+            }
+        }
+        return visibleValues;
+    }
+
+
     public static void main(String[] args) {
         /*
       1
@@ -97,6 +131,14 @@ public class RightViewOfBinaryTree {
 
         List<TreeNode> visibleValues = rightSideView(root);
 
+        System.out.print("Right Side Views: ");
+        for (int i = 0; i< visibleValues.size(); i++)
+            System.out.print(visibleValues.get(i).val + ",");
+
+        System.out.println();
+
+        visibleValues = leftSideView(root);
+        System.out.print("Left Side Views: ");
         for (int i = 0; i< visibleValues.size(); i++)
             System.out.print(visibleValues.get(i).val + ",");
     }
