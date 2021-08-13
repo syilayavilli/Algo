@@ -32,7 +32,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class RightViewOfBinaryTree {
+public class RightLeftViewOfBinaryTree {
 
     private static class TreeNode {
         int val;
