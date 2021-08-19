@@ -1,14 +1,14 @@
 package Challenge.Trees;
 
-class Node {
-    int val;
-    Node left;
-    Node right;
-
-    Node(int val) {
-        this.val = val;
-    }
-}
+//class Node {
+//    int val;
+//    Node left;
+//    Node right;
+//
+//    Node(int val) {
+//        this.val = val;
+//    }
+//}
 
 public class OrderTraversal {
 
@@ -32,7 +32,9 @@ public class OrderTraversal {
         node1.left = node3;
         node2.right = node4;
 
-        printInOrder(root);
+        //printInOrder(root);
+        //printPreOrder(root);
+        printPostOrder(root);
     }
 
     static void printInOrder(Node node) {
@@ -44,5 +46,41 @@ public class OrderTraversal {
         printInOrder(node.left);
         System.out.print(node.val + ",");
         printInOrder(node.right);
+    }
+
+    static void printPreOrder(Node node) {
+
+        //base condition
+        if (node == null) {
+            return;
+        }
+
+        //process the current node
+        System.out.println(node.val + ",");
+
+        //print the left
+        printPreOrder(node.left);
+
+        //print the right
+        printPreOrder(node.right);
+
+    }
+
+    static void printPostOrder(Node node) {
+
+        //base condition
+        if (node == null) {
+            return;
+        }
+
+        //print the left
+        printPreOrder(node.left);
+
+        //print the right
+        printPreOrder(node.right);
+
+        //process the current node
+        System.out.println(node.val + ",");
+
     }
 }
