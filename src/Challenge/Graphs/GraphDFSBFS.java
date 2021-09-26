@@ -106,17 +106,20 @@ public class GraphDFSBFS {
     }
 
     public static void main(String[] args) {
-        //directed graph of 5 nodes
+        //directed graph of 6 nodes
         //and this is not cyclic
         Graph graph = new Graph(6);
 
         //Create relationships between nodes
         graph.addEdge(0, 1);
         graph.addEdge(0, 4);
+
         graph.addEdge(1, 2);
         graph.addEdge(1, 3);
+
         graph.addEdge(2, 3);
         graph.addEdge(2, 4);
+        graph.addEdge(2, 0);
 
         graph.addEdge(3, null);
         graph.addEdge(4, null);
