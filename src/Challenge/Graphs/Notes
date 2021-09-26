@@ -1,0 +1,8 @@
+Template BFS
+Always used to get shortest path - this is preferred over DFS in interview
+from one source to destination
+You go by level to level - you could hit the shortest path soon
+
+Template DFS
+Topological sort DFS is Preferred
+To get the actual path - DFS is preferred
