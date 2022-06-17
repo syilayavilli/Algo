@@ -1,0 +1,19 @@
+DP - optimization technique over recursion solutions
+DP - has two properties
+  1. Overlapping subproblems - Repeating Subproblems T(2^n) you want to optimize
+  2. Optimal Substructure  - solution for one could be applied for another substructure
+
+ Not all recursion can use DP only if the above two properties are satisfied. n-queen problem would not use DP.
+ for n-queen you have solve all different combinations, there is repeated sub problems but optimal substructure cannot be used.
+
+ What is DP - this technique was discovered by Richard bellman.
+            DP
+ Memoization vs Iteratively - Interviewer expects us to use Iteratively (real DP)
+ Interview would not like memoization
+
+ Iterative DP
+   - Mechanical
+   - Functional
+
+The DP table will be based on how many parameters change if 2 then it will be two dimension
+and if the function returns boolean the DB table will return boolean
