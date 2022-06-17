@@ -33,8 +33,8 @@ public class OrderTraversal {
         node2.right = node4;
 
         //printInOrder(root);
-        //printPreOrder(root);
-        printPostOrder(root);
+        printPreOrder(root);
+        //printPostOrder(root);
     }
 
     static void printInOrder(Node node) {

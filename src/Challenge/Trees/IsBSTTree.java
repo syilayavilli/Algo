@@ -1,6 +1,9 @@
 package Challenge.Trees;
 
-//Very common mid-tier interiew question.
+//Validate Binary Search Tree
+
+
+//Very common mid-tier interview question.
 //https://leetcode.com/problems/validate-binary-search-tree/discuss/32104/c-in-order-traversal-and-please-do-not-rely-on-buggy-int_max-int_min-solutions-any-more
 
 //A tree is a balanced Search Tree if
@@ -26,6 +29,8 @@ so we need to keep both upper limit and lower limit
          /\
         4  7
  */
+
+//NOTE: Check Morris Traversal
 
 import java.util.Deque;
 import java.util.LinkedList;

@@ -20,8 +20,6 @@ package Challenge.Trees;
     1   3 5   7
  */
 
-import Challenge.LLSTQ.DeleteNodeFromBST;
-
 public class DeleteANodeFromBST {
 
     private static class TreeNode {
