@@ -1,0 +1,22 @@
+Sort the below by merge sort
+3 2 1 6 8 4 5 7
+
+divide the arrays by two and sort each array and then merge
+Any sort algorithm - will sort the input and not return the new list
+The input data structure should be changed not a new structure of sorted
+
+Divide till you one element is left than that element is sorted
+Because for that element there is nothing before or after
+Then go back and start merge
+
+Two Stacks
+     32168457
+ 3216       8457
+32   16   84  57
+3 2 1 6  8 4  5 7
+
+merge 3 and 2
+merge 1 and 6
+merge ... so on
+
+32 will become 23
