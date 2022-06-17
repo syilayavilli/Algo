@@ -6,3 +6,10 @@ You go by level to level - you could hit the shortest path soon
 Template DFS
 Topological sort DFS is Preferred
 To get the actual path - DFS is preferred
+
+Problem:
+Shortest path between src and destination in terms of Number of hops between two
+either from 0 ->1->2->3 (number of hops is 3) or 0->4->3 (number of hops is 2) the correct answer
+This can be done by BFS or DFS. But BFS is faster because BFS does level by level
+Lets do BFS. DFS takes a vertix and goes to children of vertex all the way down
+but BFS goes breadth ways
