@@ -1,0 +1,40 @@
+We use Trie for most of the String problems
+
+
+//Not using Trie
+//Given array of Strings alphabets and empty strings
+//ex. {"hello", "hi", "", "bye"}
+//write two functions String convertToString(String[] ary)
+//                    String[] convertBackToArray(String str)
+//                    encode and decode
+//    machine 1 <------communicate only by string------> machine 2
+// We could use a delimiter number or length
+//Second part of the problem
+//instead of alphabets, characters (a-z, A-Z, 0-9) #, !
+// how would you solve in this case
+//"4_6_2_0_4#hello......" 4 words, length 6, 2, 0, and 4 ..you will add a header (each string length) and then the strings as string
+//TCP - Network communication
+//malloc is another example
+// Above is homework example
+
+//Example 2
+longest Matching Prefix
+
+"app", "apple", "pear", pea", peach", hell", "he", "hello"
+Trie has a root node
+  root node has children
+  each children will store one charcter
+
+       rootnode
+       / \  \
+      a  p  h
+     /   \  \
+    p    e   e*
+   /     \   \
+  p *    a*    l
+  /      \ \   \
+ l       r* c   l*
+ /           \   \
+e*           h    o*
+
+
