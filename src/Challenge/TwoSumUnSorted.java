@@ -62,7 +62,7 @@ public class TwoSumUnSorted {
 
         public static void main(String[] args) {
 
-            //int[] result = BruteForce(new int[]{2,7,11,15}, 9);
+            int[] result = BruteForce(new int[]{2,7,11,15}, 9);
             //int[] result1 = BruteForce(new int[]{2,2,7,11,15}, 9);
             //int[] result2 = BruteForce(new int[]{2,9,3,7,6,11,15}, 9);
             //int[] result3 = BruteForce(new int[]{2,2,2,3,2,2}, 9);
@@ -70,21 +70,21 @@ public class TwoSumUnSorted {
             //int[] result5 = BruteForce(new int[]{-4,2,3,13}, 9);
             //int[] result6 = BruteForce(new int[]{1,1,1,1}, 2);
 
-            int[] result = TwoSumMap(new int[]{2,7,11,15}, 9);
-            int[] result1 = TwoSumMap(new int[]{2,2,7,11,15}, 9);
-            int[] result2 = TwoSumMap(new int[]{2,9,3,7,6,11,15}, 9);
-            int[] result3 = TwoSumMap(new int[]{2,2,2,3,2,2}, 9);
-            int[] result4 = TwoSumMap(new int[]{}, 9);
-            int[] result5 = TwoSumMap(new int[]{-4,2,3,13}, 9);
-            int[] result6 = TwoSumMap(new int[]{1,1,1,1}, 2);
+//            int[] result = TwoSumMap(new int[]{2,7,11,15}, 9);
+//            int[] result1 = TwoSumMap(new int[]{2,2,7,11,15}, 9);
+//            int[] result2 = TwoSumMap(new int[]{2,9,3,7,6,11,15}, 9);
+//            int[] result3 = TwoSumMap(new int[]{2,2,2,3,2,2}, 9);
+//            int[] result4 = TwoSumMap(new int[]{}, 9);
+//            int[] result5 = TwoSumMap(new int[]{-4,2,3,13}, 9);
+//            int[] result6 = TwoSumMap(new int[]{1,1,1,1}, 2);
 
             System.out.println("The result int[]{2,7,11,15}, target 9 is " + Arrays.toString(result));
-            System.out.println("The result int[]{2,2,7,11,15}, target 9 is " + Arrays.toString(result1));
-            System.out.println("The result int[]{2,9,3,7,6,11,15}, target 9 is " + Arrays.toString(result2));
-            System.out.println("The result int[]{2,2,2,3,2,2}, target 9 is " + Arrays.toString(result3));
-            System.out.println("The result int[]{}, target 9 is " + Arrays.toString(result4));
-            System.out.println("The result int[]{-4,2,3,13}, target 9 is " + Arrays.toString(result5));
-            System.out.println("The result int[]{1,1,1,1}, target 2 is " + Arrays.toString(result6));
+//            System.out.println("The result int[]{2,2,7,11,15}, target 9 is " + Arrays.toString(result1));
+//            System.out.println("The result int[]{2,9,3,7,6,11,15}, target 9 is " + Arrays.toString(result2));
+//            System.out.println("The result int[]{2,2,2,3,2,2}, target 9 is " + Arrays.toString(result3));
+//            System.out.println("The result int[]{}, target 9 is " + Arrays.toString(result4));
+//            System.out.println("The result int[]{-4,2,3,13}, target 9 is " + Arrays.toString(result5));
+//            System.out.println("The result int[]{1,1,1,1}, target 2 is " + Arrays.toString(result6));
 
         }
 

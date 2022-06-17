@@ -23,6 +23,11 @@ public class MaxSum2DMatrix {
                          { 1,  0, 2, 20, 0, 4 }
         };
 
+        int mat1[][] = { { 5, 10 , 11},
+                         { 1,  2, 3},
+                         { 4,  6, 7},
+        };
+
         int mat2[][] = new int[6][4];
 
         String [][] example = { {"Please!", "Thanks"},
@@ -30,7 +35,7 @@ public class MaxSum2DMatrix {
                                 {"Why?", "Where?", "When?", "Who?"},
                                 {"Yes!"}
                                 };
-        System.out.println("Maximun Sum in a path found is " + maxSumInPath(mat));
+        System.out.println("Maximun Sum in a path found is " + maxSumInPath(mat1));
     }
 
     public static int maxSumInPath(int[][] ary) {
@@ -57,12 +62,12 @@ public class MaxSum2DMatrix {
         //Base Condition 3: Hit the wall on the right
         //
         if (col == ary[0].length - 1) {
-            // return current value + go to the right
+            // return current value + go to down
             return ary[row][col] + maxSumInPath(ary, row + 1, col);
         }
 
         //recursive case 4 - somewhere in the middle
-        // you can down or right
+        // you can go down or right
         //int maxFromDown = ary[row][col] + maxSumInPath(ary, row +1, col);
         //int maxFromRight = ary[row][col] + maxSumInPath(ary, row, col +1);
 

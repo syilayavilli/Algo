@@ -3,7 +3,7 @@ package Challenge;
 //Note: String are immutable in Java. For Large string this will cause problems
 //Use non-mutable data structure like String Buffer or use the same string and use pointers
 // String are thread safe and secure
-//This class has the implementation to use only one string
+//This class has the implementation to use only one string and also with pointers
 
 //Note: Using String s1 = "Hello World" and String s2 = "Hello World" - Java uses a process called "Interning"
 //String Literals are interned, however String object created with a "new" will be a separate pointer.

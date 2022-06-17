@@ -1,0 +1,63 @@
+Recursion
+Fibonacci Series
+https://syedtousifahmed.medium.com/fibonacci-iterative-vs-recursive-5182d7783055
+https://medium.com/@danfcorreia/fibonacci-iterative-28b042a3eec
+
+for n > 1:
+T(n) = T(n-1) + T(n-2) + 4 (1 comparison, 2 subtractions, 1 addition)
+Let’s say c = 4 and try to first establish a lower bound by approximating that T(n-1) ~ T(n-2) , though T(n-1) ≥ T(n-2), hence lower bound
+T(n) = T(n-1) + T(n-2) + c
+     = 2T(n-2) + c    //from the approximation T(n-1) ~ T(n-2)
+     = 2*(2T(n-4) + c) + c
+     = 4T(n-4) + 3c
+     = 8T(n-6) + 7c
+     = 2^k * T(n - 2k) + (2^k - 1)*c
+Let's find the value of k for which: n - 2k = 0
+k = n/2
+T(n) = 2^(n/2) * T(0) + (2^(n/2) - 1)*c
+     = 2^(n/2) * (1 + c) - c
+i.e. T(n) ~ 2^(n/2)
+now for the upper bound, we can approximate T(n-2) ~ T(n-1) as T(n-2) ≤ T(n-1)
+T(n) = T(n-1) + T(n-2) + c
+     = 2T(n-1) + c    //from the approximation T(n-1) ~ T(n-2)
+     = 2*(2T(n-2) + c) + c
+     = 4T(n-2) + 3c
+     = 8T(n-3) + 7c
+     = 2^k * T(n - k) + (2^k - 1)*c
+Let's find the value of k for which: n - k = 0
+k = n
+T(n) = 2^n * T(0) + (2^n - 1)*c
+     = 2^n * (1 + c) - c
+i.e. T(n) ~ 2^n
+Hence the time taken by recursive Fibonacci is O(2^n) or exponential.
+
+
+Backtracking - Recursion
+https://www.youtube.com/watch?v=Zq4upTEaQyM
+
+
+
+https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
+
+Find out what operations we need to do
+Select a data structure and sometimes the LRU Cache - you will need more than one data structure
+Variety of questions
+Different Questions
+125 Questions
+
+N-Queen question is banned from Google
+N-Queen is a backtracking problem
+But other back tracking problem is allowed
+
+LRU Cache
+Delete Node from BST
+Alien Dictionary
+
+System Design
+-------------
+Publish Subscribe Service
+NoSQL DB
+Persistant DB
+
+In Tier-2 - Domain Specific Questions
+Oracle/SAP/CISCO/IBM

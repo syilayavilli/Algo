@@ -1,17 +1,13 @@
 package Challenge;
 
+//https://blog.devgenius.io/power-set-algorithm-with-recursion-or-bits-cc3ffcfc0daa
+
 public class PowerSet {
 
     //Try generic object type as well
     public static void printPowerSet(int[] ary) {
         int[] outputAry = new int[ary.length];
         printPowerSet(ary, 0, outputAry, 0);
-    }
-
-    //Try generic object type as well
-    public static void printPowerSet2(int[] ary) {
-        int[] outputAry = new int[ary.length];
-        printPowerSet2(ary, 0, outputAry, 0);
     }
 
     //Read will be indexed for the input array and write will be indexed for output array
@@ -36,10 +32,14 @@ public class PowerSet {
         outputAry[write] = ary[read];
         printPowerSet(ary, read+1, outputAry, write +1);
 
-
-
         //Recursive case - Don't Select Note: write is kept as is. Previous use of increment would impact here.
         printPowerSet(ary, read+1, outputAry, write);
+    }
+
+    //Try generic object type as well
+    public static void printPowerSet2(int[] ary) {
+        int[] outputAry = new int[ary.length];
+        printPowerSet2(ary, 0, outputAry, 0);
     }
 
     //Deselect followed by Select
@@ -71,9 +71,9 @@ public class PowerSet {
     }
 
     public static void main (String[] args) {
-        int[] ary ={1,2,3};
-        //printPowerSet(ary);
-        printPowerSet2(ary);
+        int[] ary ={4,5,6};
+        printPowerSet(ary);
+        //printPowerSet2(ary);
     }
 
 }

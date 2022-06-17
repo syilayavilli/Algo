@@ -9,16 +9,16 @@ public class StringCombination {
 
         // All possible strings
         String str = "apple";
-
+        str = "cat";
         // n^2 ; but because of substring and print it will be n^3
-        for (int start=0; start < str.length(); start++) {
-            for (int end= start +1 ; end < str.length() + 1; end++) {
-                //we need length + 1 because the substring end is exclusive
-                String subStr = str.substring(start, end);
-                System.out.print(subStr + "|");
-
-            }
-        }
+//        for (int start=0; start < str.length(); start++) {
+//            for (int end= start +1 ; end < str.length() + 1; end++) {
+//                //we need length + 1 because the substring end is exclusive
+//                String subStr = str.substring(start, end);
+//                System.out.print(subStr + "|");
+//
+//            }
+//        }
 
         // we need to get "apple"
         /*
@@ -33,6 +33,10 @@ public class StringCombination {
          */
 
         printSubStringSets(str);
+
+        //Hw - check if the word exists in dictionary
+        //Put in the list only the valid ones
+        //Word Break is the name of the problem or palendromic decomposition
 
     }
 
