@@ -1,0 +1,36 @@
+LRU - Least Recently Used
+Linked List - middle of the node
+Runners?
+you would run one at 2X and the other at 1x
+when 2X reaches the end, 1X will be at the middle
+
+Middle of the node - delete a node -
+
+LRU Cache - persists the data
+Distributed cache or local cache
+Application instead of going to DB sitting on a disk
+we load the data in memory and in memory access (from RAM) is faster than disk access.
+
+Even you can have a Singleton class, along with some Factory to put the cache in the application server
+or can have external service which maintains the cache, and you call the endpoint of it to retrive
+also need to take care of eviction policies
+
+
+Question 2:
+Given singly linked list detect a loop and find the start of the loop and remove the loop.
+Hare and tortoise - Two pointers - one pointer moves one position and the other pointer moves twice
+The values are unique and when you go at different speed if you meet a node there is a loop.
+Freud's algorithm
+Hashtable is brute force
+Freud's alogorithm to solve
+Since we need to find
+Solution - If the assumption is unique values - we could compare the values
+Solution - (Better Solution) - Compare the objects themselves and in this case we could have duplicates
+
+
+
+
+
+
+
+
