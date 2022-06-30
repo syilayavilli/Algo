@@ -112,17 +112,21 @@ public class CountIslandBinaryMatrix {
 
         // every cell needs to check its neighbors deep using dfs
         //and there are eight neighbors for each cell. So traverse all
-        for (int dir= 0; dir<directions.length; dir++) {
+        for (int i= 0; i<directions.length; i++) {
 
-            int newRow = row + directions[dir][0]; //0 cell is row and 1 cell is col
-            int newCol = col + directions[dir][1];
+            int newRow = row + directions[i][0]; //0 cell is row and 1 cell is col
+            int newCol = col + directions[i][1];
 
             if (isValid(matrix, newRow, newCol) && (matrix[newRow][newCol] == 1)){
                 //do dfs
                 dfs(matrix, newRow, newCol);
             }
         }
-
+        //we could also call the dfs 8 times
+        //dfs(matrix, row+1, col); //down
+        //dfs(matrix, row-1, col); //up
+        //dfs(matrix, row, col+1); //right
+        // so on
     }
 
     public static boolean isValid(int[][] matrix, int r, int c) {
