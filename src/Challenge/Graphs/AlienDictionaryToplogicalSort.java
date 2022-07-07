@@ -103,7 +103,6 @@ public class AlienDictionaryToplogicalSort {
         Queue<Character> queue = new LinkedList<>();
         for (char c : g.keySet()) {
             if (indegree[c - 'a'] == 0) {
-                System.out.println("C-" + c +  "contains" + (c-'a'));
                 sb.append(c);
                 queue.offer(c);
             }
@@ -118,9 +117,7 @@ public class AlienDictionaryToplogicalSort {
             for (char neighbor : g.get(cur)) {
                 //we should decrease the indegree by one
                 indegree[neighbor - 'a']--;
-                System.out.println("neighbor-" + neighbor +  "contains" + (neighbor-'a'));
                 if (indegree[neighbor - 'a'] == 0) {
-                    System.out.println("neighborZZZ-" + neighbor +  "contains" + (neighbor-'a'));
                     queue.offer(neighbor);
                     sb.append(neighbor);
                 }
