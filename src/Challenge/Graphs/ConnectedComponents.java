@@ -136,8 +136,6 @@ public class ConnectedComponents {
 
     }
 
-
-
     public static void main(String[] args) {
         UndirectedGraph graph = new UndirectedGraph(5);
         graph.addEdge(0, 3);
