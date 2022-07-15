@@ -74,7 +74,7 @@ public class CountIslandBinaryMatrix {
         {-1, -1}, //up left
         {1,1}, //down right
         {1,-1}, //down left
-        {-1,1} //down right
+        {-1,1} //up right
     };
 
     public static void main(String args[]) {

@@ -137,17 +137,19 @@ public class DetectCycleInGraph {
             LinkedList<Integer> list = adjList[v]; //get neighbors of v or all vertices connected to v
             if (list != null) {
                 for (Integer c : list) {
+                    //System.out.println("neighbor  is " + c );
                     if (c != null && !isVisited[c]) { // not visited
                         if(dfsCycle(c, isVisited, isAlive)) {
                             return true;
                         }
                     } if (c != null && isVisited[c] && isAlive[c]) { // is is Visited & Alive also which means there is a cycle
+                        System.out.println("Found cyclic node  is " + c );
                         return true;  //if cycle just simply return
                     }
                 }
             }
             isAlive[v] = false; //backtrack because of the path
-
+            System.out.println("v is " + v + " isAlive is " + isAlive[v]);
             return false; //no cycle found so return false.
         }
 
@@ -156,7 +158,7 @@ public class DetectCycleInGraph {
     public static void main(String[] args) {
         //directed graph of 6 nodes
         //and this is not cyclic
-        Graph graph = new Graph(6);
+        Graph graph = new Graph(7);// 6
 
         //Create relationships between nodes
         graph.addEdge(0, 1);
@@ -167,10 +169,10 @@ public class DetectCycleInGraph {
 
         graph.addEdge(2, 3);
         graph.addEdge(2, 4);
-        graph.addEdge(2, 0);
+        graph.addEdge(2, 6); //2,0
 
         graph.addEdge(3, null);
-        graph.addEdge(4, null);
+        graph.addEdge(4, null); //4 null
 
         //This edge will not get touched because of the direction which is incoming edge
         //so to touch this, we need a for loop
