@@ -142,13 +142,14 @@ public class DetectCycleInGraph {
                         if(dfsCycle(c, isVisited, isAlive)) {
                             return true;
                         }
+                        isAlive[v] = false; //backtrack because of the path
                     } if (c != null && isVisited[c] && isAlive[c]) { // is is Visited & Alive also which means there is a cycle
                         System.out.println("Found cyclic node  is " + c );
                         return true;  //if cycle just simply return
                     }
                 }
             }
-            isAlive[v] = false; //backtrack because of the path
+            //isAlive[v] = false; //backtrack because of the path
             System.out.println("v is " + v + " isAlive is " + isAlive[v]);
             return false; //no cycle found so return false.
         }
